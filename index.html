@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cool Clouds Nitrogen Ice Cream</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Come enjoy the most fresh and tasty ice cream in Tyler! We have a huge variety of flavors on our menu..">
+	<meta name="keywords" content="ice cream, nitrogen, ice, cream, liquid nitrogen, froyo, frozen, yogurt, smoothie, shake, sweet, dessert, tyler, texas, tx, late night, night, ali arshad, ali, arshad">
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,300,700">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/owl.carousel.css">
+    <link rel="stylesheet" href="style/owl.theme.css">
+    <link rel="stylesheet" href="style/owl.transitions.css">
+</head>
+
+<body id="page-top">
+    <div ng-app="app">
+        <div ng-controller="mainCtrl" ng-cloak>
+            
+            <section layout="row" flex>
+                
+                <!-- sidenav -->
+                <md-sidenav id="leftnav" class="md-sidenav-left md-whiteframe-z2" md-component-id="leftnav" md-is-locked-open="$mdMedia('gt-sm')">
+                    <md-content layout-padding>
+                        <md-list>
+                            <md-list-item ng-click="navigate('home')">
+                                <p>Home</p>
+                            </md-list-item>
+                            <md-divider />
+                            <md-list-item ng-click="navigate('about')">
+                                <p>About</p>
+                            </md-list-item>
+                            <md-divider />
+                            <md-list-item ng-click="navigate('gallery')">
+                                <p>Gallery</p>
+                            </md-list-item>
+                            <md-divider />
+                            <md-list-item ng-click="navigate('flavors')">
+                                <p>Flavors</p>
+                            </md-list-item>
+                            <md-divider />
+                            <md-list-item ng-click="navigate('contact')">
+                                <p>Contact</p>
+                            </md-list-item>
+                        </md-list>
+                    </md-content>
+                </md-sidenav>
+            
+                <md-button id="navIcon" class="md-raised md-accent left" data-ng-click="toggleLeft()" aria-label="Open left nav" hide-gt-sm>
+                    <!--<img id="menuIcon" data-ng-src="img/burger.png" />-->
+                    =
+                </md-button>
+
+                <md-content flex class="left-offset">
+                    <div id="mast-logo"><img ng-src="img/logo.png"/></div>
+                    
+                    <div id="home">
+                        <div id="owl-mast" class="owl-carousel">
+                            <div class="item"><img src="img/mast1.jpg" alt="masthead 1"></div>
+                            <div class="item"><img src="img/mast2.jpg" alt="masthead 2"></div>
+                        </div>
+                    </div>
+
+                    <div id="about" layout="column" layout-gt-sm="row" layout-align="center center" layout-padding class="light-blue pad-sm-top pad-sm-bottom">
+                        <md-card class="md-whiteframe-z2">
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">Ultra Smooth</span>
+                                    <span class="md-subhead">When using liquid nitrogen, very few ice crystals are left behind after the freezing process. The results are an ice cream like no other, ultra smooth and ultra creamy!</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content layout="row">
+                                <div class="md-media-xl card-media"><img ng-src="img/creamy.jpg" /></div>
+                            </md-card-content>
+                        </md-card>
+                        
+                        <md-card class="md-whiteframe-z2">
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">Liquid Nitrogen</span>
+                                    <span class="md-subhead">We use liquid nitrogen and cutting-edge culinary technology to flash freeze our unique ice cream combinations. The process produces cool clouds of nitrogen fog.</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-actions layout="row" layout-padding class="pad-top-none pad-bottom-none margin-none-top margin-none-bottom">
+                                <md-button class="md-raised md-accent btn-sm" ng-click="showWhatsNitro()">What's Liquid Nitrogen?</md-button>
+                            </md-card-actions>
+                            <md-card-content layout="row">
+                                <div class="md-media-xl card-media"><img ng-src="img/nitro.jpg" /></div>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+
+                    <div id="gallery">
+                        <div id="owl-gal" class="owl-carousel">
+                            <div class="item"><img class="lazyOwl" data-src="img/gal1.jpg"><p class="md-caption">gallery image 1</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal2.jpg"><p class="md-caption">gallery image 2</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal3.jpg"><p class="md-caption">gallery image 3</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal4.jpg"><p class="md-caption">gallery image 4</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal5.jpg"><p class="md-caption">gallery image 5</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal1.jpg"><p class="md-caption">gallery image 6</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal2.jpg"><p class="md-caption">gallery image 7</p></div>
+                            <div class="item"><img class="lazyOwl" data-src="img/gal3.jpg"><p class="md-caption">gallery image 8</p></div>
+                        </div>
+                    </div>
+
+                    <div id="flavors" layout="column">
+                        <md-toolbar class="md-accent">
+                            <div class="md-toolbar-tools">
+                                <h2 class="md-flex">Flavors</h2>
+                            </div>
+                        </md-toolbar>
+                        <md-content layout-padding flex class="light-blue pad-sm-top pad-sm-bottom box-shadow">
+                            <md-list>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Vanilla</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Chocolate</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Coffee</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Pistachio</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Cookies N' Cream</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Strawberry</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Rocky Road</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Pina Colada</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Peanut Butter</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Mango</h3></div></md-list-item>
+                                <md-list-item class="flavor"><div class="md-item-text md-whiteframe-z2" flex><h3>Cotton Candy</h3></div></md-list-item>
+                            </md-list>
+                        </md-content>
+                    </div>
+
+                    <div id="contact" layout="column" layout-gt-sm="row" layout-align="center center" layout-padding class="dark-gray white-text">
+                        <div layout-margin>
+                            <p>Phone</p>
+                            <p hide show-gt-md>&nbsp;&nbsp;&nbsp;(903) 123-4567</p>
+                            <p hide show-xs show-sm show-md><a data-ng-href="tel:9031234567">&nbsp;&nbsp;&nbsp;(903) 123-4567</a></p>
+
+                            <p>Hours</p>
+                            <p show-gt-md>&nbsp;&nbsp;&nbsp;Mon - Thurs: 11am to 9pm</br>&nbsp;&nbsp;&nbsp;Fri - Sun: 11am to 11pm</br></p>
+
+                            <p>Address</p>
+                            <p><a target="blank" data-ng-href="http://maps.google.com/?q=Tyler, TX">&nbsp;&nbsp;&nbsp;12345 That One Road</br>&nbsp;&nbsp;&nbsp;Tyler, TX  12345</a></p>
+                        </div>
+
+                        <div layout-margin>
+                            <md-card class="sqimg md-whiteframe-z2">
+                                <a target="blank" data-ng-href="http://maps.google.com/?q=Tyler, TX"><img ng-src="img/map.jpg" class="md-card-image" alt="map" /></a>
+                            </md-card>
+                        </div>
+                    </div>
+    
+                    <div id="footer" layout="row" layout-align="space-between end" layout-padding class="dark-gray white-text">
+                        <div flex>
+                            <p class="md-caption margin-none-bottom">&copy; 2015 Cool Clouds Nitrogen Ice Cream &nbsp;//&nbsp; Designed and Built by <a ng-href="http://www.ali-arsh.com" target="blank">Ali Arshad</a></p>
+                        </div>
+                        <div>
+                            <span class="iconfb"><a data-ng-href="http://www.facebook.com" target="blank"><img ng-src="img/fb.png"/></a></span>
+                            <span class="iconyp"><a data-ng-href="http://www.yelp.com" target="blank"><img ng-src="img/yelp.png"/></a></span>
+                        </div>
+                    </div>
+                </md-content>
+                
+            </section>
+        </div>
+    </div>
+    
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!--owl-->
+    <script src="controllers/owl.carousel.min.js"></script>
+    <!--angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <!--app-->
+    <script src="app.js"></script>
+    <script src="controllers/mainCtrl.js"></script>
+</body>
+</html>
