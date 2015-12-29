@@ -1,5 +1,14 @@
 angular.module("app").controller("mainCtrl", function($scope,$timeout,$mdSidenav,$mdMedia,$mdDialog){
     
+    /* page loader */
+        $scope.loading = true;
+
+        angular.element(document).ready(function () {
+            $timeout(function(){
+                $scope.loading = false;
+            },2000)
+        });
+    
     /* navigation */
         function buildToggler(navID) {
             return function() {
