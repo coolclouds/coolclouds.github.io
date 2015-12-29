@@ -17,9 +17,13 @@
 
 <body id="page-top">
     <div ng-app="app">
-        <div ng-controller="mainCtrl" ng-cloak>
+        <div ng-controller="mainCtrl">
             
-            <section layout="row" flex>
+            <div layout="row" layout-align="center center" layout-margin layout-padding ng-show="loading">
+                <md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="100"></md-progress-circular>
+            </div>
+            
+            <section layout="row" flex ng-hide="loading" ng-cloak>
                 
                 <!-- sidenav -->
                 <md-sidenav id="leftnav" class="md-sidenav-left md-whiteframe-z2" md-component-id="leftnav" md-is-locked-open="$mdMedia('gt-sm')">
