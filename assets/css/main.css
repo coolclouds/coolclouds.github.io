@@ -3391,8 +3391,12 @@ button,
     .wrapper.style3 {
         background-color: #1E2832;
         color: rgba(255, 255, 255, 0.75);
-        background-attachment: fixed;
-        background-image: url("images/overlay.png"), url("../../img/banner2.jpg");
+        /*background-attachment: fixed;*/
+        /*background-image: url("images/overlay.png"), url("../../img/banner2.jpg");*/
+        background: url("images/overlay.png"), url("../../img/banner2.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
     }
 
@@ -3803,8 +3807,12 @@ body {
     padding: 8em 0 6em 0;
     background-color: #1E2832;
     color: rgba(255, 255, 255, 0.75);
-    background-attachment: fixed;
-    background-image: url("images/overlay.png"), url("../../img/banner.jpg");
+    /*background-attachment: fixed;*/
+    /*background-image: url("images/overlay.png"), url("../../img/banner.jpg");*/
+    background: url("images/overlay.png"), url("../../img/banner.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     text-align: center;
 }
