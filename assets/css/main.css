@@ -46,7 +46,7 @@ body {
 }
 
 .green{
-    color: rgb(56,142,60);
+    color: rgb(56,142,60) !important;
     font-weight: bold;
 }
 
